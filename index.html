@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -147,7 +146,6 @@
     <div class="recipe-grid" id="recipeGrid"></div>
 </div>
 
-<!-- MODAL CHI TIẾT & TẠM SỬA -->
 <div id="detailModal" class="modal">
     <div class="modal-content">
         <button onclick="closeModal('detailModal')" style="position:absolute; right:10px; top:10px; background:none; border:none; color:#fff; font-size:20px;">✕</button>
@@ -166,7 +164,6 @@
 <script>
     // =========================================================================
     // KHU VỰC THÊM MÓN ĂN TRỰC TIẾP TRONG CODE (HARDCODE DATA)
-    // Bạn cứ thêm, bớt hoặc sửa các object món ăn ở mảng dưới này theo đúng mẫu.
     // =========================================================================
     let recipes = [
         {
@@ -180,48 +177,42 @@
             steps: "1. Đun sôi nước dùng phở bò.\n2. Xếp bánh phở đã trần vào tô, thêm thịt bò tái và hành lên trên.\n3. Chan nước dùng thật sôi vào để thịt chín tái và thưởng thức.",
             notes: "Húp nóng, thêm dấm tỏi hoặc chanh ớt tùy khẩu vị cá nhân."
         },
-
-
         {
-  name: "Nước cốt bún riêu",
-  ings: [
-    { n: "Hành Ba rô", a: "10", u: "cm", s: "băm nhỏ" },
-    { n: "Ớt sừng ", a: "150", u: "g", s: "băm nhỏ" },
-    { n: "Cà chua ", a: "450", u: "g", s: "băm nhỏ" },
-    { n: "Cà chua ", a: "450", u: "ít", s: "Bổ cau" },
-    { n: "Nấm đông cô tươi", a: "15", u: "chiếc", s: "Rửa sạch với muối hạt" },
-    { n: "Nấm đùi gà to ", a: "3", u: "Cái", s: "Cắt thành 30 miếng dạng lát mỏng" },
-    { n: "Cà rốt", a: "1", u: "củ", s: "Tỉa hoa dày 0.5 cm" },
-    { n: "Nước dùng củ quả ", a: "3.5", u: "lít", s: "Đã đun sôi " },
-    { n: "Dầu điều", a: "100", u: "ml", s: "Đã đun bằng hạt dầu điều" },
-    { n: "Nước lọc", a: "2", u: "lít", s: "Nước phải sạch" },
-    { n: "Nước đậu", a: "1", u: "Túi", s: "Mua ở chợ" }
-  ],
-
-  steps: "
-1. Cho chảo nóng \n\
-2. 100 ml dầu điều\n\
-3. Cho hành ba rô và ớt sừng băm vào xào thơm\n\
-4. Cho cà chua băm vào xào khoảng 3 phút\n\
-5. Cho nấm đùi gà và nấm đông cô vào xào chung khoảng 2 phút\n\
-6. Cho 10 ml mắm chay Liên thành\n\
-7. Cho 3-4 muỗng chao đầy\n\
-8. Cho 4 muỗng cà-phê đường\n\
-9. Cho 1 muỗng cafe mỳ chính\n\
-10. Cho 13 muỗng cafe hạt nêm\n\
-11. Đun sôi \n\
-12. Cho 500 ml nước đậu vào và đun đến khi xuất hiện kết tủa\n\
-13. Đun tiếp 3 phút lửa riu riu rồi nếm lại xem đã vừa ăn chưa\n\
-14. Nếu vừa thì tăt bếp để nguội. Nếu chưa vừa thì thêm 2-3 muỗng hạt nêm khuấy đều r tắt bếp để nguội 
-",
-
-  notes: "
-Hạt nêm luôn luôn nhỏ hơn hoặc bằng 16 muỗng nếu nhiều hơn có thể bị mặn, áp dụng cho 10 bát bún riêu,tương đương 5 lít nước 
-"
-    }
+            name: "Nước cốt bún riêu",
+            ings: [
+                { n: "Hành Ba rô", a: "10", u: "cm", s: "băm nhỏ" },
+                { n: "Ớt sừng ", a: "150", u: "g", s: "băm nhỏ" },
+                { n: "Cà chua ", a: "450", u: "g", s: "băm nhỏ" },
+                { n: "Cà chua ", a: "450", u: "ít", s: "Bổ cau" },
+                { n: "Nấm đông cô tươi", a: "15", u: "chiếc", s: "Rửa sạch với muối hạt" },
+                { n: "Nấm đùi gà to ", a: "3", u: "Cái", s: "Cắt thành 30 miếng dạng lát mỏng" },
+                { n: "Cà rốt", a: "1", u: "củ", s: "Tỉa hoa dày 0.5 cm" },
+                { n: "Nước dùng củ quả ", a: "3.5", u: "lít", s: "Đã đun sôi " },
+                { n: "Dầu điều", a: "100", u: "ml", s: "Đã đun bằng hạt dầu điều" },
+                { n: "Nước lọc", a: "2", u: "lít", s: "Nước phải sạch" },
+                { n: "Nước đậu", a: "1", u: "Túi", s: "Mua ở chợ" }
+            ],
+            // Đã chuyển đổi sang dấu ` để xuống dòng tự nhiên và hợp lệ
+            steps: `1. Cho chảo nóng
+2. 100 ml dầu điều
+3. Cho hành ba rô và ớt sừng băm vào xào thơm
+4. Cho cà chua băm vào xào khoảng 3 phút
+5. Cho nấm đùi gà và nấm đông cô vào xào chung khoảng 2 phút
+6. Cho 10 ml mắm chay Liên thành
+7. Cho 3-4 muỗng chao đầy
+8. Cho 4 muỗng cà-phê đường
+9. Cho 1 muỗng cafe mỳ chính
+10. Cho 13 muỗng cafe hạt nêm
+11. Đun sôi
+12. Cho 500 ml nước đậu vào và đun đến khi xuất hiện kết tủa
+13. Đun tiếp 3 phút lửa riu riu rồi nếm lại xem đã vừa ăn chưa
+14. Nếu vừa thì tăt bếp để nguội. Nếu chưa vừa thì thêm 2-3 muỗng hạt nêm khuấy đều r tắt bếp để nguội`,
+            notes: `Hạt nêm luôn luôn nhỏ hơn hoặc bằng 16 muỗng nếu nhiều hơn có thể bị mặn, áp dụng cho 10 bát bún riêu,tương đương 5 lít nước`
+        }, // <-- Đã bổ sung dấu phẩy ở đây để kết nối với món tiếp theo
 
 
-    
+
+
         {
             name: "Thịt Kho Tàu",
             ings: [
