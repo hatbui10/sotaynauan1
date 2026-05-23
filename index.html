@@ -249,6 +249,47 @@
             notes: `Hạt nêm luôn luôn nhỏ hơn hoặc bằng 16 muỗng nếu nhiều hơn có thể bị mặn, áp dụng cho 10 bát bún riêu,tương đương 5 lít nước`
         }, // <-- Đã bổ sung dấu phẩy ở đây để kết nối với món tiếp theo
 
+
+{
+  name: "Cơm lứt rau củ",
+  ings: [
+    { n: "Lá húng quế", a: "10-12", u: "Lá", s: "Cắt khúc 1 cm", c: "Loại to" },
+    { n: "Hành ba rô", a: "5", u: "cm", s: "thái mỏng", c: "Loại to" },
+    { n: "Giò chay", a: "0.5", u: "khoanh", s: "thái hạt lựu", c: "Loại vừa" },
+    { n: "Túi hạt rau củ", a: "1", u: "Nửa bát con", s: "đập nhẹ cho tơi", c: "Trong tủ đông" },
+    { n: "Dầu ăn", a: "15", u: "ml", s: "Dùng trực tiếp", c: "Loại 5 lít" },
+    { n: "Đường", a: "1", u: "thìa cafe", s: "", c: "Loại đường kính" },
+    { n: "Hạt nêm", a: "1", u: "thìa cafe", s: "", c: "Knor" },
+    { n: "Mỳ chính", a: "1/2", u: "thìa cafe", s: "", c: "hãng Ajinomoto" },
+    { n: "Nước tương xì dầu", a: "2", u: "bóp", s: "", c: "hãng Maggi" },
+    { n: "Dầu hào", a: "1,5", u: "bóp", s: "", c: "hãng Maggi" },
+    { n: "Cơm lứt", a: "3", u: "nắm to", s: "", c: "Đã nấu chín để nguội" },
+    { n: "Gạo lứt sấy", a: "1,5", u: "nắm", s: "", c: "Đã mua sẵn" },
+    { n: "Hành khô", a: "1", u: "nhúm to", s: "", c: "Đã chiên sẵn" },
+    { n: "Hạt vừng mè", a: "1", u: "nhúm to", s: "", c: "Đã rang chín" },
+    { n: "Dầu mè thơm", a: "2", u: "Bóp", s: "", c: "Đã mua sẵn" }
+  ],
+
+  steps: `
+1. Cho dầu ăn vào chảo nóng
+2. Tiếp tục cho hành ba rô + giò chay hạt lựu vào phi thơm
+3. Tắt bếp , tiếp tục cho hạt rau củ, đường, hạt nêm, mỳ chính, dầu hào, xì dầu.
+4. Bật bếp lửa vừa xào mọi thứ khoảng 3 phút, cho ngấm gia vị
+5. Cho cơm lứt vào đảo đều, vừa đảo vừa sóc lên cho đều trong 3 phút.
+6. Tiếp tục cho gạo lứt sấy + hành khô chiên + vừng và đảo trong 30s
+7. Cho lá húng quế cắt khúc đảo trong 20s 
+8. Cho dầu mè thơm đảo đều trong 5s rồi tắt bếp và cho ra niêu cơm
+`,
+
+  notes: `
+- Cơm chiên xong ko được mặn, ko được vón cục, ko có mùi lạ, ko bị nhão,
+- Cơm chiên xong cần khô ráo vừa ăn, tơi xốp, các thành phần khác phải chín đều. 
+- Món ăn trưng bày cần đẹp mắt và có mùi thơm hấp dẫn
+`
+},
+
+
+
 {
   name: "Nước dùng rau củ",
   ings: [
@@ -405,10 +446,4 @@
             txt += `💡 LƯU Ý:\n${r.notes}\n\n------------------\n\n`;
         });
         const blob = new Blob(["\ufeff", txt], { type: 'text/plain' });
-        const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'Cookbook_Grid.txt'; a.click();
-    }
-
-    function closeModal(id) { document.getElementById(id).style.display = 'none'; }
-</script>
-</body>
-</html>
+        const a = document.createElement
