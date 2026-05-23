@@ -112,20 +112,20 @@
         /* BẢNG COMPACT */
         .recipe-table { width: 100%; border-collapse: collapse; font-size: 11px; margin: 8px 0; table-layout: auto; }
         .recipe-table th, .recipe-table td { border: 1px solid #333; padding: 4px; text-align: left; }
-        .col-idx { width: 8%; text-align: center !important; }
-        .col-name { width: 34%; }
-        .col-val { width: 11%; text-align: center !important; }
+        .col-idx { width: 4%; text-align: center !important; }
+        .col-name { width: 20%; }
+        .col-val { width: 7%; text-align: center !important; }
         .col-unit { width: 7%; text-align: center !important; }
         .col-status { width: 25%; }
 
         /* ĐIỀU CHỈNH CHIỀU CAO TEXTAREA */
         #edSteps {
-            min-height: 200px;
+            min-height: 500px;
             resize: vertical;
         }
 
         #edNotes {
-            min-height: 80px;
+            min-height: 120px;
             resize: vertical;
         }
         
@@ -177,6 +177,45 @@
             steps: "1. Đun sôi nước dùng phở bò.\n2. Xếp bánh phở đã trần vào tô, thêm thịt bò tái và hành lên trên.\n3. Chan nước dùng thật sôi vào để thịt chín tái và thưởng thức.",
             notes: "Húp nóng, thêm dấm tỏi hoặc chanh ớt tùy khẩu vị cá nhân."
         },
+{
+  name: "Nước cốt bún bò",
+  ings: [
+    { n: "Sả", a: "8", u: "Cây", s: "băm nhỏ", c: "Loại to" },
+    { n: "Ớt sừng", a: "150", u: "g", s: "băm nhỏ", c: "Loại to" },
+    { n: "Hành ba rô", a: "10", u: "cm", s: "băm nhỏ", c: "Loại to" },
+    { n: "Nấm đùi gà", a: "2", u: "cây", s: "rửa sạch, thái thành 30 lát cao 0,5 cm", c: "Loại to" },
+    { n: "Nấm đông cô", a: "15", u: "cái", s: "rửa sạch bỏ chân cắt đôi", c: "Tươi" },
+    { n: "Cà rốt", a: "100", u: "g", s: "Tỉa thành 10 bông hoa cao 0,5 cm", c: "Loại to" },
+    { n: "Ngô", a: "1", u: "bắp", s: "Bóc vỏ cắt thành 10 khúc , mỗi khúc 2 hàng ngô", c: "Loại to" },
+    { n: "Dầu điều", a: "100", u: "ml", s: "Sau khi chảo nóng thì cho vào", c: "Đã sơ chế" },
+    { n: "Nước dùng", a: "3,5", u: "lít", s: "Sử dụng trực tiếp", c: "Đã đun đạt tiêu chuẩn" },
+    { n: "Đường", a: "4", u: "thìa cafe", s: "Dùng trực tiếp", c: "Loại đường kính" },
+    { n: "Hạt nêm", a: "12", u: "thìa cafe", s: "Dùng trực tiếp", c: "Knor" },
+    { n: "Mỳ chính", a: "1", u: "thìa cafe", s: "Dùng trực tiếp", c: "Ajinomoto" },
+    { n: "Nước lọc", a: "1,5", u: "lít", s: "Dùng trực tiếp", c: "Tùy chọn" },
+    { n: "Mắm chay", a: "20", u: "ml", s: "Dùng trực tiếp", c: "hãng mắm chay Liên Thành" },
+    { n: "Bò lác", a: "30", u: "cái", s: "Ngâm với nước cho nở", c: "Túi bự" }
+  ],
+
+  steps: `
+1. Làm chảo nóng lên
+2. Cho dầu điều
+3. Cho sả + ớt sừng + hành Ba rô vào xào 2 phút cho thơm
+4. Tiếp tục cho nấm đông cô + nấm đùi gà đã sơ chế + 20ml nước mắm chay để khử mùi của nấm
+5. Tiếp tục cho bò lác + cà rốt vào đảo 2 phút
+6. Tiếp tục cho 3.5 lít nước dùng củ quả
+7. Tiếp tục bổ sung 1,5 lít nước lọc cho đủ 10 bát
+8. Cho 10 khúc ngô vào
+9. Đun sôi và nếm lại xem vừa chưa, nếu chưa thì bổ sung tiếp 2-3 thìa hạt nêm, nhưng không quá 16 muỗng trừ khi có sự cố xảy ra
+10. Đun lửa riu riu 3 phút r nếm lại sau đó tắt bếp. 
+`,
+
+  notes: `
+- Khi xào nấm và hành sả ớt, đến trước khi cho nước dùng cần để lửa nhỏ tránh bị cháy khét
+
+- Sau khi bổ sung nước dùng thì cho to lửa để đun sôi.
+`
+},
         {
             name: "Nước cốt bún riêu",
             ings: [
