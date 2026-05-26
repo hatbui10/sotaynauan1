@@ -314,6 +314,31 @@ Yêu cầu món ăn ko bị mặn, không bị nát, không vón cục, không b
 `
 },
 
+
+
+{
+  name: "Nước mắm chua ngọt",
+  ings: [
+    { n: "Nước mắm cơm tấm", a: "1/2", u: "bát inox tròn vát", s: "trần sơ", c: "Đã làm sẵn" },
+    { n: "Tỏi", a: "1", u: "Củ", s: "băm nhỏ", c: "Loại to" },
+    { n: "Ớt sừng", a: "1/2", u: "quả", s: "băm nhỏ", c: "Loại to" },
+    { n: "Ớt chỉ thiên", a: "2", u: "quả", s: "băm nhỏ", c: "Loại bằng ngón út" },
+    { n: "Tắc quất", a: "4", u: "quả", s: "", c: "Loại chín" }
+  ],
+
+  steps: `
+1. Băm thật nhỏ ớt + tỏi rồi cho vào bát inox chứa nước mắm cơm tấm
+2. Cắt tắc quất dùng lọc lấy nước bỏ hạt rồi cho vào bát inox chứa cơm tấm
+3. Nếm lại cho vừa, nếu chưa đủ chua thì cho thêm tắc.
+`,
+
+  notes: `
+Không được làm quá nhiếu tắc sẽ chua loét, ko còn ngon nữa.
+`
+},
+
+
+
         {
             name: "Thịt Kho Tàu",
             ings: [
@@ -433,19 +458,4 @@ Yêu cầu món ăn ko bị mặn, không bị nát, không vón cục, không b
         }
     }
 
-    function exportTxt() {
-        let txt = "--- SỔ TAY NẤU ĂN V30 ---\n\n";
-        recipes.forEach(r => {
-            txt += `🥘 MÓN: ${r.name.toUpperCase()}\n`;
-            r.ings.forEach(i => txt += `- ${i.n}: ${i.a} ${i.u} [${i.s}]\n`);
-            txt += `📝 CHẾ BIẾN:\n${r.steps}\n`;
-            txt += `💡 LƯU Ý:\n${r.notes}\n\n------------------\n\n`;
-        });
-        const blob = new Blob(["\ufeff", txt], { type: 'text/plain' });
-        const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'Cookbook_Grid.txt'; a.click();
-    }
-
-    function closeModal(id) { document.getElementById(id).style.display = 'none'; }
-</script>
-</body>
-</html>
+    function exportTxt
