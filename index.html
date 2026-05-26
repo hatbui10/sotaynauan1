@@ -337,6 +337,28 @@ Không được làm quá nhiếu tắc sẽ chua loét, ko còn ngon nữa.
 `
 },
 
+{
+  name: "Nước mắm cơm  Tấm",
+  ings: [
+    { n: "Đường đỏ", a: "2", u: "bát ăn cơm trắng", s: "Dùng trực tiếp", c: "Loại vàng" },
+    { n: "Nước mắm", a: "2", u: "bát con trắng ăn cơm", s: "Dùng trực tiếp", c: "hãng mắm chay Liên Thành" },
+    { n: "Nước lọc", a: "4", u: "bát con trắng", s: "Dùng trực tiếp", c: "Loại sạch" },
+    { n: "Muối tinh", a: "1/2", u: "thìa cafe", s: "Dùng trực tiếp", c: "Loại hạt cát" },
+    { n: "Bột ngọt", a: "1/2", u: "thìa cafe", s: "", c: "Loại Ajinomoto" },
+    { n: "Dứa", a: "1/4", u: "quả", s: "Đã rửa sạch và cắt miếng dày 0,5 cm", c: "Loại to" }
+  ],
+
+  steps: `
+1. Cho hỗn hợp vào nồi lẩu đun lửa vừa đến khi sôi thì hạ lửa, đun lửa riu riu chừng 15 phút.
+2. Có bọt thì vớt bọt bỏ đi.
+
+`,
+
+  notes: `
+Cần nếm lại để biết độ mặn nhạt của nước mắm cơm Tấm
+`
+},
+
 
 
         {
@@ -432,30 +454,4 @@ Không được làm quá nhiếu tắc sẽ chua loét, ko còn ngon nữa.
     }
 
     function deleteRecipe() {
-        if(confirm("Xoá món này tạm thời? (Sẽ xuất hiện lại khi tải lại trang)")) { 
-            recipes.splice(currentIdx, 1); 
-            renderGrid(); 
-            closeModal('detailModal'); 
-        }
-    }
-
-    function toggleSecurity() {
-        if(!isUnlocked) { 
-            if(prompt("Pass:") === "4321") isUnlocked = true; 
-        } else {
-            isUnlocked = false;
-        }
-        updateUI();
-    }
-
-    function updateUI() {
-        const btn = document.getElementById('btnLock');
-        if (!btn) return;
-        btn.innerText = isUnlocked ? "🔒 Đang mở" : "🔓 Mở khóa sửa";
-        btn.classList.toggle('unlocked-state', isUnlocked);
-        if(isUnlocked && document.getElementById('btnEnterEdit')) {
-            document.getElementById('btnEnterEdit').style.display = 'block';
-        }
-    }
-
-    function exportTxt
+        if(confirm("Xoá món này tạm th
