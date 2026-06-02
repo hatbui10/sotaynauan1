@@ -219,48 +219,259 @@
     // KHU VỰC DATA MÓN ĂN
     // =========================================================================
     let recipes = [
-        {
-            name: "Phở Bò Bản Ngắn",
-            ings: [
-                { n: "Bánh phở tươi", a: "500", u: "g", s: "Trần sơ" },
-                { n: "Thịt bò tái", a: "200", u: "g", s: "Thái mỏng" },
-                { n: "Nước cốt xương", a: "1.5", u: "Lít", s: "Ninh ngọt" },
-                { n: "Hành lá + Rau thơm", a: "1", u: "Ít", s: "Rửa sạch" }
-            ],
-            steps: "1. Đun sôi nước dùng phở bò.\n2. Xếp bánh phở đã trần vào tô, thêm thịt bò tái và hành lên trên.\n3. Chan nước dùng thật sôi vào để thịt chín tái và thưởng thức.",
-            notes: "Húp nóng, thêm dấm tỏi hoặc chanh ớt tùy khẩu vị cá nhân."
-        },
-        {
-            name: "Nước cốt bún riêu",
-            ings: [
-                { n: "Hành Ba rô", a: "10", u: "cm", s: "băm nhỏ" },
-                { n: "Ớt sừng ", a: "150", u: "g", s: "băm nhỏ" },
-                { n: "Cà chua ", a: "450", u: "g", s: "băm nhỏ" },
-                { n: "Cà chua ", a: "450", u: "ít", s: "Bổ cau" },
-                { n: "Nấm đông cô tươi", a: "15", u: "chiếc", s: "Rửa sạch với muối hạt" },
-                { n: "Nấm đùi gà to ", a: "3", u: "Cái", s: "Cắt thành 30 miếng dạng lát mỏng" },
-                { n: "Cà rốt", a: "1", u: "củ", s: "Tỉa hoa dày 0.5 cm" },
-                { n: "Nước dùng củ quả ", a: "3.5", u: "lít", s: "Đã đun sôi " },
-                { n: "Dầu điều", a: "100", u: "ml", s: "Đã đun bằng hạt dầu điều" },
-                { n: "Nước lọc", a: "2", u: "lít", s: "Nước phải sạch" },
-                { n: "Nước đậu", a: "1", u: "Túi", s: "Mua ở chợ" }
-            ],
-            steps: `1. Cho chảo nóng\n2. 100 ml dầu điều\n3. Cho hành ba rô và ớt sừng băm vào xào thơm\n4. Cho cà chua băm vào xào khoảng 3 phút\n5. Cho nấm đùi gà và nấm đông cô vào xào chung khoảng 2 phút\n6. Cho 10 ml mắm chay Liên thành\n7. Cho 3-4 muỗng chao đầy\n8. Cho 4 muỗng cà-phê đường\n9. Cho 1 muỗng cafe mỳ chính\n10. Cho 13 muỗng cafe hạt nêm\n11. Đun sôi\n12. Cho 500 ml nước đậu vào và đun đến khi xuất hiện kết tủa\n13. Đun tiếp 3 phút lửa riu riu rồi nếm lại xem đã vừa ăn chưa\n14. Nếu vừa thì tăt bếp để nguội. Nếu chưa vừa thì thêm 2-3 muỗng hạt nêm khuấy đều r tắt bếp để nguội`,
-            notes: `Hạt nêm luôn luôn nhỏ hơn hoặc bằng 16 muỗng nếu nhiều hơn có thể bị mặn, áp dụng cho 10 bát bún riêu,tương đương 5 lít nước`
-        },
+             {
+            name: "Phở Bò Bản Ngắn",
+            ings: [
+                { n: "Bánh phở tươi", a: "500", u: "g", s: "Trần sơ" },
+                { n: "Thịt bò tái", a: "200", u: "g", s: "Thái mỏng" },
+                { n: "Nước cốt xương", a: "1.5", u: "Lít", s: "Ninh ngọt" },
+                { n: "Hành lá + Rau thơm", a: "1", u: "Ít", s: "Rửa sạch" }
+            ],
+            steps: "1. Đun sôi nước dùng phở bò.\n2. Xếp bánh phở đã trần vào tô, thêm thịt bò tái và hành lên trên.\n3. Chan nước dùng thật sôi vào để thịt chín tái và thưởng thức.",
+            notes: "Húp nóng, thêm dấm tỏi hoặc chanh ớt tùy khẩu vị cá nhân."
+        },
+{
+  name: "Nước cốt bún bò",
+  ings: [
+    { n: "Sả", a: "8", u: "Cây", s: "băm nhỏ", c: "Loại to" },
+    { n: "Ớt sừng", a: "150", u: "g", s: "băm nhỏ", c: "Loại to" },
+    { n: "Hành ba rô", a: "10", u: "cm", s: "băm nhỏ", c: "Loại to" },
+    { n: "Nấm đùi gà", a: "2", u: "cây", s: "rửa sạch, thái thành 30 lát cao 0,5 cm", c: "Loại to" },
+    { n: "Nấm đông cô", a: "15", u: "cái", s: "rửa sạch bỏ chân cắt đôi", c: "Tươi" },
+    { n: "Cà rốt", a: "100", u: "g", s: "Tỉa thành 10 bông hoa cao 0,5 cm", c: "Loại to" },
+    { n: "Ngô", a: "1", u: "bắp", s: "Bóc vỏ cắt thành 10 khúc , mỗi khúc 2 hàng ngô", c: "Loại to" },
+    { n: "Dầu điều", a: "100", u: "ml", s: "Sau khi chảo nóng thì cho vào", c: "Đã sơ chế" },
+    { n: "Nước dùng", a: "3,5", u: "lít", s: "Sử dụng trực tiếp", c: "Đã đun đạt tiêu chuẩn" },
+    { n: "Đường", a: "4", u: "thìa cafe", s: "Dùng trực tiếp", c: "Loại đường kính" },
+    { n: "Hạt nêm", a: "12", u: "thìa cafe", s: "Dùng trực tiếp", c: "Knor" },
+    { n: "Mỳ chính", a: "1", u: "thìa cafe", s: "Dùng trực tiếp", c: "Ajinomoto" },
+    { n: "Nước lọc", a: "1,5", u: "lít", s: "Dùng trực tiếp", c: "Tùy chọn" },
+    { n: "Mắm chay", a: "20", u: "ml", s: "Dùng trực tiếp", c: "hãng mắm chay Liên Thành" },
+    { n: "Bò lác", a: "30", u: "cái", s: "Ngâm với nước cho nở", c: "Túi bự" }
+  ],
+
+  steps: `
+1. Làm chảo nóng lên
+2. Cho dầu điều
+3. Cho sả + ớt sừng + hành Ba rô vào xào 2 phút cho thơm
+4. Tiếp tục cho nấm đông cô + nấm đùi gà đã sơ chế + 20ml nước mắm chay để khử mùi của nấm
+5. Tiếp tục cho bò lác + cà rốt vào đảo 2 phút
+6. Tiếp tục cho 3.5 lít nước dùng củ quả
+7. Tiếp tục bổ sung 1,5 lít nước lọc cho đủ 10 bát
+8. Cho 10 khúc ngô vào
+9. Đun sôi và nếm lại xem vừa chưa, nếu chưa thì bổ sung tiếp 2-3 thìa hạt nêm, nhưng không quá 16 muỗng trừ khi có sự cố xảy ra
+10. Đun lửa riu riu 3 phút r nếm lại sau đó tắt bếp.
+`,
+
+  notes: `
+- Khi xào nấm và hành sả ớt, đến trước khi cho nước dùng cần để lửa nhỏ tránh bị cháy khét
+
+- Sau khi bổ sung nước dùng thì cho to lửa để đun sôi.
+`
+},
+        {
+            name: "Nước cốt bún riêu",
+            ings: [
+                { n: "Hành Ba rô", a: "10", u: "cm", s: "băm nhỏ" },
+                { n: "Ớt sừng ", a: "150", u: "g", s: "băm nhỏ" },
+                { n: "Cà chua ", a: "450", u: "g", s: "băm nhỏ" },
+                { n: "Cà chua ", a: "450", u: "ít", s: "Bổ cau" },
+                { n: "Nấm đông cô tươi", a: "15", u: "chiếc", s: "Rửa sạch với muối hạt" },
+                { n: "Nấm đùi gà to ", a: "3", u: "Cái", s: "Cắt thành 30 miếng dạng lát mỏng" },
+                { n: "Cà rốt", a: "1", u: "củ", s: "Tỉa hoa dày 0.5 cm" },
+                { n: "Nước dùng củ quả ", a: "3.5", u: "lít", s: "Đã đun sôi " },
+                { n: "Dầu điều", a: "100", u: "ml", s: "Đã đun bằng hạt dầu điều" },
+                { n: "Nước lọc", a: "2", u: "lít", s: "Nước phải sạch" },
+                { n: "Nước đậu", a: "1", u: "Túi", s: "Mua ở chợ" }
+            ],
+            // Đã chuyển đổi sang dấu ` để xuống dòng tự nhiên và hợp lệ
+            steps: `1. Cho chảo nóng
+2. 100 ml dầu điều
+3. Cho hành ba rô và ớt sừng băm vào xào thơm
+4. Cho cà chua băm vào xào khoảng 3 phút
+5. Cho nấm đùi gà và nấm đông cô vào xào chung khoảng 2 phút
+6. Cho 10 ml mắm chay Liên thành
+7. Cho 3-4 muỗng chao đầy
+8. Cho 4 muỗng cà-phê đường
+9. Cho 1 muỗng cafe mỳ chính
+10. Cho 13 muỗng cafe hạt nêm
+11. Đun sôi
+12. Cho 500 ml nước đậu vào và đun đến khi xuất hiện kết tủa
+13. Đun tiếp 3 phút lửa riu riu rồi nếm lại xem đã vừa ăn chưa
+14. Nếu vừa thì tăt bếp để nguội. Nếu chưa vừa thì thêm 2-3 muỗng hạt nêm khuấy đều r tắt bếp để nguội`,
+            notes: `Hạt nêm luôn luôn nhỏ hơn hoặc bằng 16 muỗng nếu nhiều hơn có thể bị mặn, áp dụng cho 10 bát bún riêu,tương đương 5 lít nước`
+        }, // <-- Đã bổ sung dấu phẩy ở đây để kết nối với món tiếp theo
+
+{
+  name: "Nước dùng rau củ",
+  ings: [
+    { n: "Cà rốt", a: "Có bao nhiêu xài bấy nhiêu", u: "g", s: "Rửa sạch", c: "Loại cắt vụn từng khúc" },
+    { n: "Su su", a: "4", u: "Củ", s: "thái 1 cm", c: "Loại bằng nắm tay trở lên" },
+    { n: "Củ đậu", a: "1", u: "Củ", s: "Đã gọt vỏ và rửa sạch, cắt khúc 1 cm", c: "Loại to" },
+    { n: "Ngô", a: "2", u: "Bắp", s: "Rưả sạch cắt khúc 2 hàng", c: "Loại to" },
+    { n: "Gừng", a: "6", u: "lát", s: "Rửa sạch", c: "Loại to" },
+    { n: "Củ cải trắng", a: "20", u: "cm", s: "Rửa  sạch căt khúc 1 cm", c: "Loại to" },
+    { n: "Hành khô", a: "1", u: "Củ", s: "thái mỏng", c: "Loại to" },
+    { n: "Hành lá ba rô", a: "3-4", u: "Khúc", s: "Rửa sạch cắt 10cm", c: "Loại to" }
+  ],
+
+  steps: `
+1. Sau khi sôi tiếp tục đun khoảng 45 phút cho nước ngọt
+2. Vớt 20 khúc ngô sang 1 một tô riêng
+3. Các phần khác bỏ vào thùng rác
+4. Nhấc nồi nước dùng sang chỗ khác và đạy vung
 
 
+`,
+
+  notes: `
+- Tùy vào số lượng túi bún riêu hoặc bún bò để căn lượng nguyên liệu và lượng nước dùng để nấu cho phù hợp. Nhưng ko ít hơn 10 túi một loại.
+`
+},
+
+
+{
+  name: "Cơm lứt rau củ",
+  ings: [
+    { n: "Hành ba rô", a: "5", u: "cm", s: "băm nhỏ", c: "Loại to" },
+    { n: "Giò chay", a: "1/2", u: "khoanh 0,5 cm", s: "thái hạt lựu", c: "Loại to" },
+    { n: "Húng quế", a: "8", u: "lá", s: "Thái khúc 1cm", c: "Loại to" },
+    { n: "Dầu ăn", a: "20", u: "ml", s: "Dùng trực tiếp", c: "Loại 5 lít" },
+    { n: "Túi hạt rau củ", a: "1", u: "nắm vừa", s: "", c: "Đã làm sẵn" },
+    { n: "Dầu hào", a: "1", u: "bóp", s: "", c: "hãng Maggi" },
+    { n: "Xì dầu", a: "1", u: "bóp", s: "", c: "hãng Maggi" },
+    { n: "Đường", a: "1", u: "thìa cafe", s: "", c: "Đường kính" },
+    { n: "Hạt nêm", a: "1", u: "thìa cafe", s: "", c: "Knor" },
+    { n: "Bột ngọt", a: "1/3", u: "thìa cafe", s: "", c: "hãng Ajinomoto" },
+    { n: "Cơm lứt", a: "3", u: "nắm", s: "", c: "Đã nấu chín để nguội" },
+    { n: "Gạo lứt sấy", a: "2", u: "nhúm", s: "", c: "Mua ở chợ" },
+    { n: "Hành khô chiên", a: "1", u: "nhúm", s: "", c: "Mua ở chợ" },
+    { n: "Vừng mè", a: "1,5", u: "nhúm", s: "", c: "Mua ở chợ" },
+    { n: "Dầu mè thơm", a: "2", u: "bóp", s: "", c: "Mua ở chợ" }
+  ],
+
+  steps: `
+1. Đun cho nóng chảo
+2. Cho hành ba rô phi thơm
+3. Tiếp tục cho giò chay + hạt rau củ đảo 1 phút rồi tắt bếp
+4. Tiếp tục cho dầu hào,xì dầu, đường, bột ngọt, hạt nêm
+5. Bật bếp lên để lửa vừa, tiếp tục cho cơm lứt vào đảo đều 2 phút,
+6. Tiếp tục cho gạo lứt sấy + hành khô chiên + vừng rồi vừa đảo vừa sóc trong 2 phút
+7. Tiếp tục cho lá húng quế và đảo trong 30s
+8. Tiếp tục xịt 2 bóp dầu mè thơm rồi tắt bếp
+
+`,
+
+  notes: `
+Yêu cầu món ăn ko bị mặn, không bị nát, không vón cục, không bị khét.không bị nhạt
+`
+},
+
+
+
+{
+  name: "Nước mắm chua ngọt",
+  ings: [
+    { n: "Nước mắm cơm tấm", a: "1/2", u: "bát inox tròn vát", s: "trần sơ", c: "Đã làm sẵn" },
+    { n: "Tỏi", a: "1", u: "Củ", s: "băm nhỏ", c: "Loại to" },
+    { n: "Ớt sừng", a: "1/2", u: "quả", s: "băm nhỏ", c: "Loại to" },
+    { n: "Ớt chỉ thiên", a: "2", u: "quả", s: "băm nhỏ", c: "Loại bằng ngón út" },
+    { n: "Tắc quất", a: "4", u: "quả", s: "", c: "Loại chín" }
+  ],
+
+  steps: `
+1. Băm thật nhỏ ớt + tỏi rồi cho vào bát inox chứa nước mắm cơm tấm
+2. Cắt tắc quất dùng lọc lấy nước bỏ hạt rồi cho vào bát inox chứa cơm tấm
+3. Nếm lại cho vừa, nếu chưa đủ chua thì cho thêm tắc.
+`,
+
+  notes: `
+Không được làm quá nhiếu tắc sẽ chua loét, ko còn ngon nữa.
+`
+},
+
+{
+  name: "Nước mắm cơm  Tấm",
+  ings: [
+    { n: "Đường đỏ", a: "2", u: "bát ăn cơm trắng", s: "Dùng trực tiếp", c: "Loại vàng" },
+    { n: "Nước mắm", a: "2", u: "bát con trắng ăn cơm", s: "Dùng trực tiếp", c: "hãng mắm chay Liên Thành" },
+    { n: "Nước lọc", a: "4", u: "bát con trắng", s: "Dùng trực tiếp", c: "Loại sạch" },
+    { n: "Muối tinh", a: "1/2", u: "thìa cafe", s: "Dùng trực tiếp", c: "Loại hạt cát" },
+    { n: "Bột ngọt", a: "1/2", u: "thìa cafe", s: "", c: "Loại Ajinomoto" },
+    { n: "Dứa", a: "1/4", u: "quả", s: "Đã rửa sạch và cắt miếng dày 0,5 cm", c: "Loại to" }
+  ],
+
+  steps: `
+1. Cho hỗn hợp vào nồi lẩu đun lửa vừa đến khi sôi thì hạ lửa, đun lửa riu riu chừng 15 phút.
+2. Có bọt thì vớt bọt bỏ đi.
+
+`,
+
+  notes: `
+Cần nếm lại để biết độ mặn nhạt của nước mắm cơm Tấm
+`
+},
+
+{
+  name: "Rong biển của cơm chiên cá mặn",
+  ings: [
+    { n: "Rong biển tròn", a: "10", u: "Miếng", s: "Dùng trực tiếp", c: "Loại R= 25 cm" },
+    { n: "Chảo to", a: "1", u: "chiếc", s: "Lót giấy trắng thấm dầu", c: "Loại nấu nước cốt bún bò" },
+    { n: "Sườn non chay", a: "10", u: "cái", s: "Ngâm với nước cho nở hoàn toàn", c: "Loại gói to" }
+  ],
+
+  steps: `
+1.Đun cho nóng chảo rồi cho dầu ăn vào
+2. Khi dầu đã đủ nóng thì cho miếng rong biển vào và chiên với thời gian khoảng 15-20s /1 miếng
+3. Sau khi đủ thời gian như vậy thì vớt ra chảo to đã lót thấm dầu
+4. Sau khi chiên đủ 10-15 miếng rong biển to thì để 1 lúc cho thấm bớt dầu rồi dàm vụn miếng rong biển ra.
+5. Rửa sạch sườn non, vắt khô một miếng sẽ cắt ngang thành 2 miếng mỏng, sau đó cắt chỉ cho đều rộng chừng 0.4-0.5 cm, cắt cho hết 10 miếng
+6. Đem chiên trong chảo nóng cho đến khi sườn non giòn thì vớt ra , chú ý canh lửa và thơi gian.
+7. Sau khi vớt sườn non ra nồi đã lót thấm dầu thì đem trộn với rong biển đã dằm nát ở trên, trộn đều rồi cất vào lọ
+
+`,
+
+  notes: `
+Yêu cầu sườn non và rong biển khi chiên không bị cháy, ko bị khét
+`
+},
+
+
+        {
+  name: "Nước dùng rau củ",
+  ings: [
+    { n: "Cà rốt", a: "1", u: "khúc nhỏ 3 cm", s: "Rửa sạch bóc vỏ", c: "Loại to" },
+    { n: "Su su", a: "4", u: "quả", s: "Bóc vỏ rửa sạch", c: "Loại vừa" },
+    { n: "Củ đậu", a: "1", u: "củ", s: "Bóc vỏ rửa sạch cắt khúc", c: "loại vừa" },
+    { n: "Ngô", a: "2", u: "Cái", s: "Lột vỏ ,rửa sạch cắt khúc bằng 2 hàng ngô", c: "Loại to" },
+    { n: "Gừng", a: "1/2", u: "củ to", s: "Rửa sạch cắt lát", c: "Loại to" },
+    { n: "Củ cải trắng", a: "1", u: "củ", s: "Rửa sạch bóc vỏ cắt khúc 1 cm", c: "Loại to" },
+    { n: "Lá hành ba rô", a: "3-4", u: "Lá", s: "Rửa sạch", c: "Loại to" }
+  ],
+
+  steps: `
+1. Rửa sạch nồi đun nước dùng cho nước cách miệng tầm 5 cm
+2. Thả hết các củ quả đã cắt vào
+3. Tiếp tục đun lửa riu riu 45 phút kể từ lúc sôi
+`,
+
+  notes: `
+Tùy theo nấu nước cho một loại bún hay cả hai loại mà căn lượng nước cho đủ tránh thừa gây lãng phí
+`
+},
+
+        
+        {
+            name: "Thịt Kho Tàu",
+            ings: [
+                { n: "Thịt ba chỉ", a: "500", u: "g", s: "Cắt khối" },
+                { n: "Trứng cút lòng đào", a: "10", u: "Quả", s: "Luộc bóc vỏ" },
+                { n: "Nước dừa tươi", a: "400", u: "ml", s: "Lọc cặn" }
+            ],
+            steps: "1. Ướp thịt với mắm, đường, hành băm trong 30 phút.\n2. Đảo thịt cho săn lại rồi đổ nước dừa vào đun sôi, hớt bọt.\n3. Hạ nhỏ lửa kho liu riu đến khi thịt mềm thì cho trứng cút vào kho thêm 15 phút.",
+            notes: "Không khuấy mạnh tay tránh làm vỡ trứng cút."
+        }
         
-        {
-            name: "Thịt Kho Tàu",
-            ings: [
-                { n: "Thịt ba chỉ", a: "500", u: "g", s: "Cắt khối" },
-                { n: "Trứng cút lòng đào", a: "10", u: "Quả", s: "Luộc bóc vỏ" },
-                { n: "Nước dừa tươi", a: "400", u: "ml", s: "Lọc cặn" }
-            ],
-            steps: "1. Ướp thịt với mắm, đường, hành băm trong 30 phút.\n2. Đảo thịt cho săn lại rồi đổ nước dừa vào đun sôi, hớt bọt.\n3. Hạ nhỏ lửa kho liu riu đến khi thịt mềm thì cho trứng cút vào kho thêm 15 phút.",
-            notes: "Không khuấy mạnh tay tránh làm vỡ trứng cút."
-        }
     ];
     // =========================================================================
 
